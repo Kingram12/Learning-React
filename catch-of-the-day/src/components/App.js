@@ -9,7 +9,6 @@ render() {
         <div className="catch-of-the-day">
         <div className="menu">
             <Header tagline="Fresh Seafood Market"></Header>
-            <Header tagline="Wes is Cool"></Header>
         </div>
         <Order></Order>
         <Inventory></Inventory>
@@ -23,3 +22,7 @@ export default App;
 
 //export right away - don't forget it
 //anything that isnt a string is passed in via curly braces
+
+//implicit returns  - const Header = props => ( codejaljdoawdooawd );
+
+//helper.js file for javascript functions 
