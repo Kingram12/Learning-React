@@ -26,3 +26,9 @@ export default App;
 //implicit returns  - const Header = props => ( codejaljdoawdooawd );
 
 //helper.js file for javascript functions 
+
+//events are done inline 
+//<button onClick={this.FunctionName}>Click me!</button>
+//golden rule - don't touch the DOM
+
+//state - like an object that holds data for the component and children -- updates all items with that variable name 
