@@ -43,3 +43,9 @@ export default App;
 //golden rule - don't touch the DOM
 
 //state - like an object that holds data for the component and children -- updates all items with that variable name 
+
+//data will live within app to be used by other components - cant pass the data up but you can always pass it down
+
+//how do we get an item into state? you can't update it directly from forms etc: The method and the declaration of state have to live in the same component
+
+//in order to utilize a function/method within another component, you have to use props. props will allow you to take the function that lives within the App/parent component and pass it to another component. Like passing a ball to neighbor - it's being passed by each component level until it reaches it's lowest level/required level.
