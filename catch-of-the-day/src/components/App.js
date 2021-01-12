@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./Header";
 import Order from "./Order";
 import Inventory from "./Inventory";
+import sampleFishes from "../sample-fishes"; 
+import Fish from "./Fish"; 
 
 class App extends React.Component {
   state = {
@@ -16,14 +18,20 @@ class App extends React.Component {
     // 3. Set the new fishes object to state
     this.setState({ fishes });
   };
+loadSampleFishes = () => {
+  this.setState({ fishes: sampleFishes })
+};
   render() {
     return (
       <div className="catch-of-the-day">
         <div className="menu">
           <Header tagline="Fresh Seafood Market" />
+          <ul className="fishes">
+           {Object.keys(this.state.fishes).map(key => <Fish key={key} details={this.state.fishes[key]}/>)}
+          </ul>
         </div>
         <Order />
-        <Inventory addFish={this.addFish} />
+        <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes}/>
       </div>
     );
   }
@@ -49,3 +57,7 @@ export default App;
 //how do we get an item into state? you can't update it directly from forms etc: The method and the declaration of state have to live in the same component
 
 //in order to utilize a function/method within another component, you have to use props. props will allow you to take the function that lives within the App/parent component and pass it to another component. Like passing a ball to neighbor - it's being passed by each component level until it reaches it's lowest level/required level.
+
+//any function that is going to update state needs to live within the same component as the state. 
+
+//displaying state with JSX --- review: video 15
