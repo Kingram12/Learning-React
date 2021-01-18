@@ -42,7 +42,7 @@ class App extends React.Component {
             ))}
           </ul>
         </div>
-        <Order />
+        <Order fishes={this.state.fishes} order={this.state.order}/>
         <Inventory
           addFish={this.addFish}
           loadSampleFishes={this.loadSampleFishes}
@@ -76,3 +76,5 @@ export default App;
 //any function that is going to update state needs to live within the same component as the state.
 
 //displaying state with JSX --- review: video 15
+
+//don't pass down data unless you actually need it within a component -- example: you need parts of state, you don't want to pass the entire state including information that wont be used.
